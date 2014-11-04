@@ -1,0 +1,11 @@
+## SEND ME ANY CHANGES OR IMPROVMENTS PLEASE:
+##   - jamescaseyjackson@gmail.com 
+## 
+
+WB=`git branch | grep '*' | sed 's/*/ /' | sed 's/ //g'`;
+for i in `git branch | sed 's/*/ /' | sed 's/ //g'`; do  
+    git checkout $i; 
+    git pull; 
+done
+echo " -- gitall - ALL DONE ------------- "
+git checkout $WB
