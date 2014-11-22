@@ -13,7 +13,7 @@ LOCAL_DIR=/home/jcj/git
 for i in $@; do
     echo 
     cd $LOCAL_DIR
-    echo "Working on $i"
+    echo "---- $i -------------------------------"
     if [ -d $i ]; then
 	cd ${i};
 
@@ -23,8 +23,14 @@ for i in $@; do
     else
 	cd $LOCAL_DIR
 	mkdir -p ${i}
-	echo "RUNNING: git clone ${GITUSER}@{$GITREPO}:${i}.git ${i}"
-	git clone ${GITUSER}@{$GITREPO}:${i}.git ${i}
+	echo "RUNNING: git clone ${GITUSER}@${GITREPO}:${i}.git ${i}"
+	git clone ${GITUSER}@${GITREPO}:${i}.git ${i}
+	cd ${i}
+	pwd
+	git checkout master
+	git checkout develop
+	gitall
     fi
+    echo "---- DONE ---------------------------------------"
 done
 
