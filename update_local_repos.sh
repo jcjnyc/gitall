@@ -3,10 +3,11 @@ GITUSER=git
 GITREPO=github.com
 
 ## CHNAGE THIS DIR TO BE WHERE YOU STORE YOUR GIT REPOS LOCAL 
-LOCAL_DIR=/home/jcj/git
+LOCAL_DIR=/usr/local/apache
+
 
 ## USAGE - NOTE, DON'T INCLUDE THE .git 
-## ./upate_local_repos.sh PATH/REPP REPO/PATH 
+## ./upate_local_repos.sh REPO REPO REPO 
 
 
 
